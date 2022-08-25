@@ -13,18 +13,19 @@ function addOrder() {
     id:id,
     phone:phone,
     order:order,
-  }
+  };
   // أدرج الكائن إلى المصفوفة
-  order.push(newOrder)
+  orders.push(newOrder);
   // طبق الخطوة 7 تحت هذا الكومنت
-  load()
+load();
 }
 
 function load() {
   let container = document.getElementById("container");
-  
+  container.innerHTML = "";
   // طبّق الخطوة 6 تحت هذا الكومنت
-orders.forEach( Element =>{
-  container.innerHTML +=     `<div><h1>${item.name} - ${item.id}</h1><h3>${item.order}</h3></div>`
-});
+  orders.forEach((item) => {
+    container.innerHTML +=     `<div><h1>${item.name} - ${item.id}</h1><h3>${item.order}</h3></div>`;
+
+  });
 }
